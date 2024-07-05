@@ -1,0 +1,59 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+using namespace std;
+
+int main()
+{
+
+
+
+  size_t v0; // ebx@2
+  int result; // eax@3
+  long double v2; // fst7@13
+  size_t v3; // eax@15
+  size_t v4; // edx@16
+  char v5[9]; // [sp+1Ah] [bp-2Eh]@6
+  char v6[10]; // [sp+23h] [bp-25h]@1
+  string s; // [sp+2Dh] [bp-1Bh]@1
+  char v8[5]; // [sp+37h] [bp-11h]@1
+  unsigned int i; // [sp+3Ch] [bp-Ch]@4
+
+  v8[0] = 33;
+  v8[1] = 60;
+  v8[2] = 55;
+  v8[3] = 63;
+  v8[4] = 97;
+  
+  cout << "Enter your username:";
+  cin >> s;
+  if ( s.size() == 9 && (v0 = s.size() ))
+  {
+    for ( i = 0; (signed int)i <= 8; ++i )
+    {
+      if ( (signed int)i > 1 )
+      {
+        if ( (signed int)i > 3 )
+          v5[i] = v8[8 - i];
+        else
+          v5[i] = s[i + 2];
+      }
+      else
+      {
+        v5[i] = s[i + 5];
+      }
+    }
+    for ( i = 0; ; ++i )
+    {
+      v3 = s.size();
+      if ( v3 > i )
+      {
+        v2 = ceil((long double)((s[i] + v5[i])) / 2);
+        (long long) v6[i] == v2;
+      }
+      break;
+    }
+	for(int i =0; i< 9; i++)
+		cout << v6[i];
+	
+}}
